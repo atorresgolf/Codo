@@ -60,17 +60,34 @@ footer{
 }*/
 /*CARDS*/
 body {
-    height: 100vh;
+   /* height: 100vh;*/
     font-family: 'Raleway', sans-serif;
+}
+.servicios {
+    border: 2px solid yellowgreen;
+    position: relative;
+    
+    height: 100vh;
+    background-image: url("/assets/img/pileta_ancha3.jpg");
+    background-position: center;
+    background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+.servicios h2 {
+    text-align: center;
+    font-size: 60px;
+    font-weight: 900;
 }
 .contenedor_servicios {
     margin: 30px;
-    background: #2f3238;
+    background: #e7ebf4;
 
-}
-.servicios h2 {
-    text-align: center;
-    background: #103785;
 }
 .row {
     width: 100%;
