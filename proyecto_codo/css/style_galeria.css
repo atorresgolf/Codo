@@ -1,0 +1,211 @@
+*{  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    border-style: dashed;
+    
+}
+
+.logo-nav{display: flex;}
+/*img{
+    width: 50px;
+    height: 50px;
+    border: 1px solid purple;
+}*/
+
+
+nav{
+    border: 1px solid green;
+    display: flex;
+    align-content: flex-start;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+
+
+.titulo{
+    border:1px solid blue;
+    /* align-items: center; */
+    /* clear: both; */
+}
+
+main{
+    border-style: double;
+}
+.descripcion{
+    border:1px solid yellow;
+}
+.galeria{
+    border:1px solid orange;
+}
+
+.ubicacion{
+    border:1px solid pink;
+}
+
+footer{
+    border-style: dashed;
+}
+
+/*body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #f3f1f5;
+}*/
+/*probando con este body*/
+body {
+   
+  background-color: lightgray;
+ 
+    font-family: 'Raleway', sans-serif;
+  
+    
+}
+
+.galeria {
+    border: 2px solid yellowgreen;
+    position: relative;
+    
+    height: 100vh;
+    background-image: url("/assets/img/habitacion_ancha2.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+.galeria h2 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 900;
+}
+/*SLIDER  https://www.youtube.com/watch?v=L3XYrfitoIQ*/
+
+.flex{
+    display: flex;
+    justify-content: center; /*centra horizontal*/
+    align-items: center; /*centra verticla*/
+    padding: 30px;
+}
+.item_slide img, .pagination_item img {
+    max-width: 100%;
+
+}
+.contenedor_galeria {
+    position: relative;
+    max-width: 1000px;
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+
+}
+.slide {
+    display:flex;
+    transform: translate3d(0, 0, 0); /*no se mueven al principio*/
+    transition: all 600ms; /*doble de tiempo q  lo standard*/
+    animation-name: autoplay; /*el nombre de la animacion, q se va a ejecutar automaticamente*/
+    animation-duration: 6.5s;
+    animation-direction: alternate; /*alterna el comienzo de la animacion*/
+    animation-fill-mode: forwards; /*para q la animacion comience al principio (primera img)*/
+    animation-iteration-count: infinite; /*no va a parar*/
+
+}
+/*ahora posiciono bien las imagenes*/
+.item_slide {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0; /*para abarcar todo el espacio vertical*/
+    flex-grow: 0; /*para abarcar todo el espacio horizontal*/
+    max-width: 100%;
+}   
+/*paginacion*/
+.pagination {
+    position: absolute; /*desaparecen estan atras todas*/
+    bottom: 20px; /*para q las imagenes para pasar pagina esten debajo*/
+    left: 0;
+    display: flex;
+    flex-wrap: wrap; /*se ajustan c/u de las img a su contenedor padre*/
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+/*configuro los items de la paginacion*/
+.pagination_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #fff;
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor:pointer;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 0 10px;
+    text-align: center;
+    transition: all 300ms;
+}
+.pagination_item:hover {
+    transform: scale(2); /*se agranda 2 veces*/
+}
+.pagination_item img {
+    display: inline-block;
+    max-width: none;
+    height: 100%; /*las img se ajustan al recuadro*/
+    transform: scale(1);
+    opacity: 0;/*no se muestran las img*/
+    transition: all 300ms;
+
+}
+.pagination_item:hover img {
+    opacity: 1;
+    transform: scale(1);
+}
+/*eventos*/
+
+input[id="1"]:checked ~ .slide {
+    animation: none; /*anulo la animacion*/
+    transform: translate3d(0, 0, 0);
+}
+input[id="1"]:checked ~ .pagination .pagination_item[for="1"] {
+    background: #fff;
+}
+input[id="2"]:checked ~ .slide {
+    animation: none; /*anulo la animacion*/
+    transform: translate3d(calc(-100% * 1), 0, 0); /*hacemos la transicio2*/
+}
+input[id="2"]:checked ~ .pagination .pagination_item[for="2"] {
+    background: #fff;
+}
+input[id="3"]:checked ~ .slide {
+    animation: none; /*anulo la animacion*/
+    transform: translate3d(calc(-100% * 2), 0, 0); /*hacemos la transicio2*/
+}
+input[id="3"]:checked ~ .pagination .pagination_item[for="3"] {
+    background: #fff;
+}
+/*Animaciones se mueve automaticamente / para la animacion declarada autoplay en .slide tgo q dividir
+el tiempo q puse en la cantidad de img. puse 6.5s 100/3 img*/
+@keyframes autoplay {
+    33% {
+        transform: translate3d(calc(-100% * 0), 0, 0); /*se queda quieta*/
+        }
+    66% {
+        transform: translate3d(calc(-100% * 1), 0, 0); /*se mueve 1 lugar*/
+     }
+     99% {
+        transform: translate3d(calc(-100% * 2), 0, 0); /*se mueve 2 lugares*/
+
+     }
+}
