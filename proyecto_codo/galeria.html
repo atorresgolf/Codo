@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style_galeria.css">
+    <title>Principal</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-nav">
+                  <img src="/assets/logo.png" alt="Logo">
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="habitaciones.html">Habitaciones</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="galeria">Galeria</a></li>
+                    <li><a href="contacto">Contacto</a></li>
+                    <li><a href="reservas">Reservas</a></li>
+                </ul>
+
+            </nav>
+        </div>
+            <div class="titulo">
+                <h1>Hotel Argento!!!</h1>
+            </div>
+        </div>
+    </header>
+    <main>
+         <section>
+            <div class="galeria">
+                <h2>Galería de Fotos</h2>
+            </div>
+        </section>
+      <!--slider-->
+      <div class="flex">
+        <div class="contenedor_galeria">
+            <input type="radio" id="1" name="image_slide" hidden><!--activa una de las imagenes-->
+            <input type="radio" id="2" name="image_slide" hidden>
+            <input type="radio" id="3" name="image_slide" hidden>
+            <div class="slide">
+            
+                <div class="item_slide">
+                    <img src="/assets/img/habitacion_ancha1.webp" alt="">
+                </div>
+                <div class="item_slide">
+                 <img src="/assets/img/habitacion_ancha3.webp" alt="">
+                </div>
+                <div class="item_slide">
+                    <img src="/assets/img/habitacion_ancha5.webp" alt="">
+                 </div>
+            </div>
+
+            <div class="pagination">
+
+                <label class="pagination_item" for="1">
+                    <img src="/assets/img/habitacion_ancha1.webp" alt="">
+                </label>
+                <label class="pagination_item" for="2">
+                    <img src="/assets/img/habitacion_ancha3.webp" alt="">
+                </label>
+                <label class="pagination_item" for="3">
+                    <img src="/assets/img/habitacion_ancha5.webp" alt="">
+                </label>
+
+            </div>
+
+        </div>
+    </div>
+    </main>
+    <footer>FOOTER Datos de contacto- redes - mail</footer>
+</body>
+</html>
