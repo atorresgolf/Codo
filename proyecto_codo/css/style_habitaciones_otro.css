@@ -1,0 +1,231 @@
+*{  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    border-style: dashed;
+    
+}
+
+.logo-nav{display: flex;}
+/*img{
+    width: 50px;
+    height: 50px;
+    border: 1px solid purple;
+}*/
+
+
+nav{
+    border: 1px solid green;
+    display: flex;
+    align-content: flex-start;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+
+
+.titulo{
+    border:1px solid blue;
+    /* align-items: center; */
+    /* clear: both; */
+}
+
+main{
+    border-style: double;
+}
+.descripcion{
+    border:1px solid yellow;
+}
+.galeria{
+    border:1px solid orange;
+}
+
+.ubicacion{
+    border:1px solid pink;
+}
+
+footer{
+    border-style: dashed;
+}
+
+/*body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #f3f1f5;
+}*/
+/*probando con este body*/
+body {
+   width: 100%;
+  /* height: 100vh;*/
+  background-color: lightgray;
+ /* display: flex;*/
+    font-family: 'Raleway', sans-serif;
+   justify-content: center; /*centra horizontal*/
+    align-items: center; /*centra verticla*/
+    
+}
+.habitaciones {
+    border: 2px solid yellowgreen;
+    position: relative;
+    
+    height: 100vh;
+    background-image: url("/assets/img/habitacion_ancha2.webp");
+    background-position: center;
+    background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+.habitaciones h2 {
+    text-align: center;
+    font-size: 60px;
+    font-weight: 900;
+}
+/*CARDS*/
+.contenedor_habitaciones {
+    width: 100%;
+    display: flex;
+    max-width: 1100px;
+}
+
+.card {
+    max-width: 100%;
+    margin: 20px;
+    border-radius: 6px ;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+    cursor: default;
+    transition: all 400ms ease; /*defino el efecto q l dare en hover*/
+}
+.card:hover {
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4); /*le cambio el sombreado*/
+    transform: translateY(-3%); /*la tarjeta se va a trasladar verticalmente*/
+}
+.card img {
+    width: 100%;
+    height: 210px;
+}
+.card .contenido {
+    padding: 15px;
+    text-align: center;
+}
+.card .contenido p {
+    line-height: 1.5;
+    color: #6a6a6a;
+}
+.card .contenido h3 {
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+.card .contenido a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    color: #2fb4cc;
+    border: 1px solid #2fb4cc;
+    border-radius: 4px;
+    transition: all 400ms ease; /*defino el efecto q l dare en hover*/
+
+}
+.card .contenido a:hover {
+    background: #2fb4cc;
+    color:#fff;
+}
+/*SLIDER*/
+
+.slider {
+    width: 95%;
+    margin: auto;
+    overflow: hidden;
+}
+.slider ul {
+    padding: 0;
+    display: flex;
+    width: 400%;
+
+    animation: cambio 20s infinite;
+    animation-direction: alternate; /*cuando llegue al final retrocede*/
+ /*   animation-timing-function: ease-in;*/
+ animation-timing-function: step-start; /*pasa de 1 solo paso*/
+}
+.slider li {
+    list-style: none;
+    width: 100%;
+}
+.slider img {
+    width: 100%;
+}
+@keyframes cambio {
+    0% {margin-left: 0;}
+    20% {margin-left: 0;} /*4 seg*/
+/* 1 seg entre imagen e imagen*/
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+
+    75% {margin-left: -300%;}
+    95% {margin-left: -300%;}
+
+}
+
+/*cards habitaciones css
+.card {
+    width: 100%;
+    margin: 20px;
+    border-radius: 6px ;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+    cursor: default;
+    transition: all 400ms ease; /*defino el efecto q l dare en hover*/
+/*}*/
+/*.card:hover {
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4); /*le cambio el sombreado*/
+  /*  transform: translateY(-3%); /*la tarjeta se va a trasladar verticalmente*/
+/*}
+.card img {
+    width: 100%;
+    height: 210px;
+}
+.card .contenido {
+    padding: 15px;
+    text-align: center;
+}
+.card .contenido p {
+    line-height: 1.5;
+    color: #6a6a6a;
+}
+.card .contenido h3 {
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+.card .contenido a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    color: #2fb4cc;
+    border: 1px solid #2fb4cc;
+    border-radius: 4px;
+    transition: all 400ms ease; /*defino el efecto q l dare en hover*/
+
+/*}
+.card .contenido a:hover {
+    background: #2fb4cc;
+    color:#fff;
+}
+
+*/

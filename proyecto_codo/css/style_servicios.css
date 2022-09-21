@@ -1,56 +1,4 @@
-*{  margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-header{
-    border-style: dashed;
-    
-}
-
-.logo-nav{display: flex;}
-/*img{
-    width: 50px;
-    height: 50px;
-    border: 1px solid purple;
-}*/
-
-
-nav{
-    border: 1px solid green;
-    display: flex;
-    align-content: flex-start;
-}
-nav ul{
-    display: flex;
-    list-style: none;
-}
-
-
-.titulo{
-    border:1px solid blue;
-    /* align-items: center; */
-    /* clear: both; */
-}
-
-main{
-    border-style: double;
-}
-.descripcion{
-    border:1px solid yellow;
-}
-.galeria{
-    border:1px solid orange;
-}
-
-.ubicacion{
-    border:1px solid pink;
-}
-
-footer{
-    border-style: dashed;
-}
-
+/*@import url(/css/index.css);
 /*body {
     display: flex;
     align-items: center;
@@ -81,14 +29,13 @@ background-attachment: fixed;
 
 .servicios h2 {
     text-align: center;
-    font-size: 60px;
+    font-size: 3rem;
     font-weight: 900;
 }
 .contenedor_servicios {
-    margin: 30px;
+    margin: 2rem;
     background: #e7ebf4;
-
-}
+ }
 .row {
     width: 100%;
     display: flex;
@@ -186,9 +133,15 @@ background-attachment: fixed;
 }
 /*Responsive Css Card*/
 @media (max-width: 1080px){
-    .imagen {
+    .imagen_card {
         flex: 100%;
         max-width: 480px;
+    }
+}
+@media (max-width: 767px){
+    .imagen_card {
+        flex: 32%;
+        max-width: 350px;
     }
 }
 @media (max-width: 400px) {
