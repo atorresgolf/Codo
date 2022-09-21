@@ -1,0 +1,475 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&family=Square+Peg&display=swap');
+
+*{  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    /* font-family: 'Poppins', sans-serif; */
+    /* font-family: 'Square Peg', cursive; */
+}
+
+/*css del header*/
+body {
+    font-family: 'Raleway', sans-serif;
+
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(/assets/img/pileta_ancha1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+/*Navigation*/
+nav {
+    
+    height: 100px;
+    width: 100%;
+    display: flex;
+    
+    justify-content: space-between ;
+    align-items: center;
+    
+}
+.logo {
+    width: 100px;
+    margin-left: 20px;
+   height: auto;
+   cursor: pointer;
+   border-radius: 3px;
+   transition: .5s;
+   opacity: .5;
+}
+.logo:hover {
+    transform: translateX(20%);
+    opacity: 1;
+}
+.usuarios {
+    display: inline-flex;
+}
+.icono_user {
+    transition: .5s;
+    color: rgb(127, 255, 212);
+    margin-left: 20px;
+    font-size: 2rem;
+}
+.icono_user:hover {
+    color: rgb(9, 13, 126);
+    font-size: 3rem;
+    transform: translateY(20%);
+}
+.boton_user {
+    background: #fff;
+    color: rgb(9, 13, 126);
+    padding: .5rem;
+    margin-left: .5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.boton_user:hover {
+    background: rgba(9, 13, 126, 0.95) ;
+    color: #fff;
+
+}
+.bar-btn {
+    font-size: 25px;
+    color: rgb(9, 13, 126);
+    margin-right: 20px;
+    cursor: pointer;
+}
+.nav-menu {
+    position: fixed;
+    width: 100%;
+    /*height: 100vh; al pcipio asi para verlo tendre q modificarlos para desp ocultarlo*/
+    height: 0vh;
+    top: 80px;
+    background: rgba(69, 75, 230, 1);
+    text-align: center;
+    transition: all .5s;
+}
+.nav-menu li {
+   /* display: block; lo cambiare desp para ocultar el menu*/
+   display: none; /*ahora oculto el menu*/
+   line-height: 10px;
+    margin: 50px 0;
+    transition: all .5s;
+}
+.nav-menu li a {
+    color: rgb(127, 255, 212);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+
+}
+.nav-menu li a.active, .nav-menu li a:hover {
+    color: rgba(9, 13, 126, 0.95);
+    transition: .3s;
+}
+#check {
+    display: none;/*oculto el check button de la pantalla*/
+}
+/*pseudo-clase checked para mostrar u ocultar el menu responsive cada vez que se de click en el icono menu*/
+#check:checked ~ .nav-menu{
+    height: 60vh;
+}
+#check:checked ~ .nav-menu li {
+    display: block;
+}
+
+/*banner text*/
+.banner-text {
+    padding: 0 30px;
+    margin-top: 250px;
+    text-align: center;
+    color: rgb(127, 255, 212);
+}
+.banner-text h2 {
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+.banner-text span {
+    color:rgba(9, 13, 126, 0.95);
+}
+.banner-text h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+.boton1 {
+    margin-right: 40px;
+    padding: 10px 30px;
+    background: rgba(9, 13, 126, 0.95) ;
+    color: #fff;
+    border-radius: 5px;
+    transition: .5s;
+    opacity: .6;
+}
+.boton1:hover {
+    background: #fff;
+    color: rgba(9, 13, 126, 0.95);
+    transform: translateX(20%);
+    opacity: 1;
+}
+.boton2 {
+    margin-right: 40px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    background: #fff;
+    color: rgba(9, 13, 126, 0.95);
+    transition: .5s;
+    opacity: .6;
+}
+.boton2:hover {
+    background: rgba(9, 13, 126, 0.95) ;
+    color: #fff;
+    transform: translateX(20%);
+    opacity: 1;
+}
+/*fin css header*/
+/*contenedor section*/
+main {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+ .reservas_fixed {
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+    background: rgba(127, 255, 212,.6);
+    height: 5vh;
+}
+    .reservar a h2 {
+        color: #fff;
+        font-size: 1.3rem;
+        text-align: center;
+        text-transform: uppercase;
+        
+    }
+    .reservar a {
+        cursor: pointer;
+    }
+    .reservar a h2:hover{
+        color: rgba(9, 13, 126, 0.95);
+        background: #fff;
+    }
+    
+.banner-descripcion {
+    margin: .5rem .5rem;
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.descripcion {
+    padding: .9rem .9rem;
+    background: rgba(127, 255, 212, .3);
+    line-height: 3rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #646161;
+
+}
+.banner-image {
+    margin: 1.5rem 1.5rem;
+}
+.banner-image img{
+    width: 100%;
+}
+/*cards-texto*/  
+.wrap {
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, rgb(0 0 0 / .5), rgb(0 0 0 / .5)), url(/assets/img/frente_1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.wrap-texto {
+    color: #fff;
+    text-align: center;
+    width: 70%;
+}
+.wrap-texto h1{
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 2rem;
+    text-transform: uppercase;
+}
+/*section cards*/
+.cards {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+    background: #f3f1f5;
+}
+
+.card {
+    width: 400px;
+    height: 500px;
+    margin: 1rem;
+    border-radius: 5px;
+    background: var(--i);
+    background-size: cover;
+    box-shadow: 3px 5px 5px rgba(3, 32, 51, .8);
+    overflow: hidden;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, .4);
+    opacity: 0;
+    transition: .5s;
+}
+.content h2, a {
+    color: rgba(255, 255, 255, .8);
+    margin: 10px 0;
+}
+.content a {
+    color: rgb(9, 13, 126);
+    font-size: 1rem;
+    font-weight: 600;
+    background: #fff;
+    padding: .5em;
+    border-radius: 5px;
+    transition: .5s;
+
+}
+.content h2 {
+    font-weight: 900;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.card:hover .content {
+    opacity: 1;
+}
+.content a:hover {
+    color: #fff;
+    background: rgb(9, 13, 126);
+    font-size: 1.5em;;
+}
+
+/*fin section*/
+.ubicacion{
+    display: flex;
+    flex-flow: column nowrap;   
+    margin-bottom: 1rem; 
+}
+    .aside {
+        background: rgba(127, 255, 212, .3);
+    }
+    .descripcion_ubicacion {
+        text-align: center;
+        padding: .8rem;
+        color: #646161;
+    }
+    .mapa {
+        width: 95%;
+    }
+
+/*footer*/
+.piePagina{
+    width: 100%;
+    background-color:  rgba(9, 13, 126, 0.95);
+    clear: both;
+      
+}
+.piePagina .grupo-1{
+        width: 95%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:30px;
+        padding: 35px 5px;
+        margin: .7rem;
+    }
+
+    
+.piePagina .grupo-1 .box figure{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.piePagina .grupo-1 .box h2{
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.piePagina .grupo-1 .box img {
+    width: 15rem;
+}
+.piePagina .grupo-1 .box p{
+    color: #efefef;
+    margin-bottom: 10px;
+}
+.piePagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px; 
+    color: #fff;
+    margin-right: 10px;
+    background-color: rgba(127, 255, 212,.7);
+    text-align: center;
+    transition: all 300ms ease;
+}
+.piePagina .grupo-1 .red-social a:hover{
+    color: rgba(127, 255, 212,.7);
+}
+.piePagina .grupo-2{
+    background-color: rgba(127, 255, 212,.7);
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+.piePagina .grupo-2 small{
+    font-size: 15px;
+}
+
+
+/*Responsive for desktop*/
+@media screen and (min-width: 800px) {
+    .logo {
+        margin-left: .6rem;
+        width: 130px;
+    }
+    nav {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        height: 100px;
+    }
+    /*oculto el icono menu par ala vista desktop*/
+    .bar-btn {
+        display: none;
+    }
+    .nav-menu {
+       
+        position: relative;
+        height: 100px;
+        top: 0;
+        background: none;
+        transition: none;
+        text-align: right;
+        margin-right: .6rem;
+    }
+    .nav-menu li {
+        display: inline-block;
+        line-height: 100px;
+        margin: 0 5px;
+        transition: none;
+    }
+    .nav-menu li a {
+        font-size: 1.1em;
+    }
+    .banner-text h1 {
+        font-size: 3.5rem;
+        margin-bottom: 30px;
+    }
+    .banner-text h2 {
+        font-size: 2.5rem;
+    }
+    /*cards*/
+    .cards {
+        flex-flow: row wrap;
+    
+    }
+    .card {
+        width: 500px;
+    }
+    .ubicacion {
+        flex-flow: row nowrap;
+    }
+/*footer*/
+.piePagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:50px;
+    padding: 45px 0px;
+}
+}
+
+
+
+
+
+@media screen and(max-width:800px) {
+
+    
+}
+
+@media screen and (min-width: 801px){
+    
+   /* .fixed_header {
+        width: 100%;
+        top:0;
+        left:0;
+        position: fixed;
+        background: #0655a4;
+    }
+    main {
+        padding-top: 80px;
+    }*/
+}
+
+
