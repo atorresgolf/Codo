@@ -17,9 +17,9 @@ body {
 
 }
 
-header {
+/*header {
     width: 100vw;
-}
+}*/
 /*Navigation*/
 nav {
     height: 80px;
@@ -28,7 +28,7 @@ nav {
     top:0;
     background: rgba(127, 255, 212,.4);
     display: flex;
-    
+    z-index: 100;
     justify-content: space-between ;
     align-items: center;
     
