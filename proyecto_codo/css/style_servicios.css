@@ -11,27 +11,20 @@ body {
    /* height: 100vh;*/
     font-family: 'Raleway', sans-serif;
 }
-.servicios {
-    border: 2px solid yellowgreen;
-    position: relative;
-    
-    height: 100vh;
-    background-image: url("/assets/img/pileta_ancha3.jpg");
-    background-position: center;
-    background-size: cover;
-background-repeat: no-repeat;
-background-attachment: fixed;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    }
-
-.servicios h2 {
-    text-align: center;
-    font-size: 3rem;
-    font-weight: 900;
+.titulo {
+    background: rgba(9, 13, 126, .6);
+    margin-top: 5px;
+    height: 35px;
+    width: 100%;
+   
 }
+.titulo h1{
+    color: rgb(127, 255, 212);
+    font-size: 20px;
+    text-align: center;
+    padding: 5px 5px;
+}
+
 .contenedor_servicios {
     margin: 2rem;
     background: #e7ebf4;
@@ -40,13 +33,13 @@ background-attachment: fixed;
     width: 100%;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-flow: column wrap;
 }
 .imagen_card {
     background: #1c548dcb ;
     position: relative;
-    flex:1;
-    max-width: 460px;
+    flex: 32%;
+    max-width: 300px;
     height: 300px;
     margin: 20px;
     overflow: hidden;
@@ -80,14 +73,14 @@ background-attachment: fixed;
     transition-property: transform; /*la q uso en el hover*/
 }
 .imagen_card .detalle_card h2 span {
-    font-weight: 900;
+    font-weight: 400;
 }
 .imagen_card:hover .detalle_card h2 {
     transform: translateY(-30px); /*sube el h2 */
 }
 .imagen_card .detalle_card p {
     margin: 30px 30px 0 30px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     text-align: center;
     opacity: 0;
@@ -117,78 +110,65 @@ background-attachment: fixed;
     color: #000;
     text-decoration: none;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 600;
     text-transform: uppercase;
 }
 .mas .leer_mas span{
-    font-weight: 900;
+    font-weight: 600;
 }
 .mas .iconos i {
     color:#000;
-    font-size: 20px;
+    font-size: 16px;
 
 }
 .mas .iconos a:not(last-child) i{
     margin-right: 20px;
 }
 /*Responsive Css Card*/
-@media (max-width: 1080px){
+
+@media screen and (min-width: 480px) {
+    .imagen_card {
+        max-width: 350px;
+    }
+    .imagen_card .detalle_card h2 span {
+        font-weight: 600;
+    }
+    .imagen_card .detalle_card p{
+        font-size: 18px;
+    }
+    .mas .leer_mas, .mas .iconos a i {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .row {
+        flex-flow: row wrap;
+    }
     .imagen_card {
         flex: 100%;
         max-width: 480px;
     }
-}
-@media (max-width: 767px){
-    .imagen_card {
-        flex: 32%;
-        max-width: 350px;
+    .imagen_card .detalle_card h2 span {
+        font-weight: 900;
     }
-}
-@media (max-width: 400px) {
     .imagen_card .detalle_card p{
-        font-size: 16px;
+        font-size: 20px;
     }
     .mas .leer_mas, .mas .iconos a i {
-        font-size: 18px;
+        font-size: 25px;
+        font-weight: 900;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .row {
+        flex-flow: row nowrap;
+    }
+    .imagen_card {
+        max-width: 480px;
+        height: 300px;
+        margin: 20px;
+        overflow: hidden;
     }
 }
 
-
-/*SLIDER*/
-
-.slider {
-    width: 95%;
-    margin: auto;
-    overflow: hidden;
-}
-.slider ul {
-    padding: 0;
-    display: flex;
-    width: 400%;
-
-    animation: cambio 20s infinite;
-    animation-direction: alternate; /*cuando llegue al final retrocede*/
- /*   animation-timing-function: ease-in;*/
- animation-timing-function: step-start; /*pasa de 1 solo paso*/
-}
-.slider li {
-    list-style: none;
-    width: 100%;
-}
-.slider img {
-    width: 100%;
-}
-@keyframes cambio {
-    0% {margin-left: 0;}
-    20% {margin-left: 0;} /*4 seg*/
-/* 1 seg entre imagen e imagen*/
-    25% {margin-left: -100%;}
-    45% {margin-left: -100%;}
-
-    50% {margin-left: -200%;}
-    70% {margin-left: -200%;}
-
-    75% {margin-left: -300%;}
-    95% {margin-left: -300%;}
-
-}

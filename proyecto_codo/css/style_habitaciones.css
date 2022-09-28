@@ -11,40 +11,156 @@
 body {
    width: 100%;
   /* height: 100vh;*/
-  background-color: lightgray;
  /* display: flex;*/
     font-family: 'Raleway', sans-serif;
    justify-content: center; /*centra horizontal*/
     align-items: center; /*centra verticla*/
     
 }
-.habitaciones {
-    position: relative;
-    height: 100vh;
-    background-image: url("/assets/img/habitacion_ancha2.webp");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: #fff;
+.titulo {
+    background: rgba(9, 13, 126, .6);
+    margin-top: 5px;
+    height: 35px;
+    width: 100%;
+   
+}
+.titulo h1{
+    color: rgb(127, 255, 212);
+    font-size: 20px;
+    text-align: center;
+    padding: 5px 5px;
+}
+
+/*slider*/
+.flex{
     display: flex;
+    justify-content: center; /*centra horizontal*/
+    align-items: center; /*centra verticla*/
+    padding: 30px;
+}
+.item_slide img, .pagination_item img {
+    max-width: 100%;
+
+}
+.contenedor_galeria {
+    position: relative;
+    max-width: 1000px;
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+
+}
+.slide {
+    display:flex;
+    transform: translate3d(0, 0, 0); /*no se mueven al principio*/
+    transition: all 600ms; /*doble de tiempo q  lo standard*/
+    animation-name: autoplay; /*el nombre de la animacion, q se va a ejecutar automaticamente*/
+    animation-duration: 6.5s;
+    animation-direction: alternate; /*alterna el comienzo de la animacion*/
+    animation-fill-mode: forwards; /*para q la animacion comience al principio (primera img)*/
+    animation-iteration-count: infinite; /*no va a parar*/
+
+}
+/*ahora posiciono bien las imagenes*/
+.item_slide {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0; /*para abarcar todo el espacio vertical*/
+    flex-grow: 0; /*para abarcar todo el espacio horizontal*/
+    max-width: 100%;
+}   
+/*paginacion*/
+.pagination {
+    position: absolute; /*desaparecen estan atras todas*/
+    bottom: 20px; /*para q las imagenes para pasar pagina esten debajo*/
+    left: 0;
+    display: flex;
+    flex-wrap: wrap; /*se ajustan c/u de las img a su contenedor padre*/
     align-items: center;
     justify-content: center;
-    }
-
-.habitaciones h2 {
-    text-align: center;
-    font-size: 3em;
-    font-weight: 900;
+    width: 100%;
 }
+/*configuro los items de la paginacion*/
+.pagination_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #fff;
+    width: 15px; /*tamanio cuadradito*/
+    height: 15px;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor:pointer;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 0 10px;
+    text-align: center;
+    transition: all 300ms;
+}
+.pagination_item:hover {
+    transform: scale(2); /*se agranda 2 veces*/
+}
+.pagination_item img {
+    display: inline-block;
+    max-width: none;
+    height: 100%; /*las img se ajustan al recuadro*/
+    transform: scale(1);
+    opacity: 0;/*no se muestran las img*/
+    transition: all 300ms;
+
+}
+.pagination_item:hover img {
+    opacity: 1;
+    transform: scale(1);
+}
+/*eventos*/
+
+input[id="1"]:checked ~ .slide {
+    animation: none; /*anulo la animacion*/
+    transform: translate3d(0, 0, 0);
+}
+input[id="1"]:checked ~ .pagination .pagination_item[for="1"] {
+    background: #fff;
+}
+input[id="2"]:checked ~ .slide {
+    animation: none; /*anulo la animacion*/
+    transform: translate3d(calc(-100% * 1), 0, 0); /*hacemos la transicio2*/
+}
+input[id="2"]:checked ~ .pagination .pagination_item[for="2"] {
+    background: #fff;
+}
+input[id="3"]:checked ~ .slide {
+    animation: none; /*anulo la animacion*/
+    transform: translate3d(calc(-100% * 2), 0, 0); /*hacemos la transicio2*/
+}
+input[id="3"]:checked ~ .pagination .pagination_item[for="3"] {
+    background: #fff;
+}
+/*Animaciones se mueve automaticamente / para la animacion declarada autoplay en .slide tgo q dividir
+el tiempo q puse en la cantidad de img. puse 6.5s 100/3 img*/
+@keyframes autoplay {
+    33% {
+        transform: translate3d(calc(-100% * 0), 0, 0); /*se queda quieta*/
+        }
+    66% {
+        transform: translate3d(calc(-100% * 1), 0, 0); /*se mueve 1 lugar*/
+     }
+     99% {
+        transform: translate3d(calc(-100% * 2), 0, 0); /*se mueve 2 lugares*/
+
+     }
+}
+
+/*fin slider*/
 /*CARDS*/
 /* box-shadow: 3.9px 7.8px 7.8px hsla(0deg 0% 0% 0% 0.38);*/
 .contenedor_habitaciones {
     display: flex;
     justify-content: center;
     flex-wrap: wrap; /*esto lo hace responsive*/
+    margin-bottom: 30px;
 }
-.cards {
+.cards_habitaciones {
     width: 300px;
     margin: 10px;
     background-color: #fff;
@@ -58,26 +174,28 @@ body {
 }
 .card_body h2{
     text-align: center;
+    font-size: 20px;
 }
 .card_body p {
     text-align: justify;
     margin-bottom: 10px;
     padding: 5px;
-    line-height: 1.5;
+    line-height: 1.2;
     color: #6a6a6a;
+    font-size: 16px;
 }
 .card_footer {
-display: flex;
-justify-content: center;
-align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .card_footer button {
-        width: 150px;
-        color: #2fb4cc;
+    width: 150px;
+    color: #2fb4cc;
     border: 2px solid #2fb4cc;
     border-radius: 15px;;
     padding: 6px;
-    font-size: 17px;
+    font-size: 15px;
     cursor: pointer;
     margin-bottom: 10px;
     transition: 0.2s; /*hace la transicion del hover mas lenta*/
@@ -88,6 +206,44 @@ align-items: center;
     border: 2px solid #fff;
 
 }
-.cards:hover {
+.cards_habitaciones:hover {
     box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+}
+
+
+@media screen and (min-width: 480px) {
+    .pagination_item {
+        width: 25px;
+        height: 25px;
+}
+.card_body h2{
+    font-size: 25px;
+}
+.card_body p {
+    line-height: 1.5;
+    font-size: 20px;
+}
+.card_footer button {
+    font-size: 17px;
+
+}
+}
+
+@media screen and (min-width: 768px) {
+    .pagination_item {
+        width: 35px;
+        height: 35px;
+}
+.card_body h2{
+    font-size: 30px;
+}
+.card_body p {
+    line-height: 1.8;
+    font-size: 26px;
+
+}
+.card_footer button {
+    font-size: 20px;
+
+}
 }
