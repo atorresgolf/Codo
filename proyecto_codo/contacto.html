@@ -11,9 +11,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/style_contacto.css">
+    <link rel="stylesheet" href=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+
     <title>Index</title>
 </head>
-<body>
+<body class="bg-secondary">
     <header>
         <nav>
          <div>
@@ -43,9 +45,44 @@
        
      </header>
     <main>
-        <section class="titulo">
-            <h1>FORMULARIO DE CONTACTO</h1>
-       </section>
+        <section class="d-flex justify-content-center">
+            <div class="card col-mm-6 p-3" >
+                <div class="d-flex justify-content-center mb-3">
+                    <h4>Formulario Contacto</h4>
+                </div>
+                <div class="mb-2">
+                    <form action="https://formsubmit.co/melinayanguez@gmail.com" method="POST" >
+                        <div class="mb-2">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" class="form-control" name="nombre" id="nombre" placeholder="ej: Anto">
+                        </div>
+                        <div class="mb-2">
+                            <label for="apellido">Apellido</label>
+                            <input type="text" class="form-control" name="apellido" id="apellido" placeholder="ej: Suarez">
+                        </div>
+                        <div class="mb-2">
+                            <label for="email">Correo Electronico</label>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="ej: Asuaarez@mail.com">
+                        </div>
+                        <div class="mb-2">
+                            <label for="sexo">Sexo</label>
+                            <input type="radio"  name="sexo" id="masculino" value="masculino" > Masculino
+                            <input type="radio"  name="sexo" id="femenino" value="femenino" > Femenino
+                        </div>
+                        <div class="mb-2">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea name="mensaje" id="mensaje" class="form-control" placeholder="ej: Hola"></textarea>
+                        </div>
+                        <div class="mb-2">
+                            <button type="submit" class="btn btn-primary" value="enviar"> Enviar</button>
+                        </div>
+                        <input type="hidden" name="_next" value="http://localhost:8000">
+                        <input type="hidden" name="_captacha" value="false">
+                        
+                    </form>
+                </div>
+            </div>
+        </section>
        
     </main>
     <footer class="piePagina">
