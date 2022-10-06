@@ -10,6 +10,42 @@ body{
     background-color: #131315;
     font-family: var(--font-style);
 }
+.header {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    font-weight: 400;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 20px;
+}
+.header a {
+    display:inline-flex;
+    text-decoration: none;
+    background: #131315;
+    color: #CBBDDB;
+    padding: 10px 20px;
+    margin:5px;
+    border-radius: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    letter-spacing: 4px;
+    border: 1px solid #8F7CEC;
+    margin: auto;
+}
+
+
+
+
+
+
+
+
+
 
 .login-box{
     position: absolute;
