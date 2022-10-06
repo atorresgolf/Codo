@@ -140,7 +140,7 @@ main {
 .banner {
     height: 40vh;
     width: 100%;
-    background-image: url(/proyecto_codo/assets/img/playa1.jpg);
+    background-image: url(/proyecto_codo/assets/img/jpg/playa1.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -365,7 +365,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to bottom, rgb(0 0 0 / .5), rgb(0 0 0 / .5)), url(/proyecto_codo/assets/img/frente_1.jpg);
+    background: linear-gradient(to bottom, rgb(0 0 0 / .5), rgb(0 0 0 / .5)), url(/proyecto_codo/assets/img/jpg/frente_1.jpg);
     background-size: cover;
     background-position: center;
 }
