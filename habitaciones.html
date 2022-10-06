@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://kit.fontawesome.com/e6f12faa36.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="assets/img/icon.png">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style_habitaciones.css">
+    <title>HABITACIONES</title>
+</head>
+<body>
+    <header>
+        <nav>
+         <div>
+             <img src="assets/img/python_blanco.png" class="logo" alt="logo">
+         </div>
+        <div class="usuarios">
+
+            <div class="icono_user"> 
+            <a href="registro_usuario.html"><i class="fa-solid fa-user"></i></a>
+            </div>
+           <!--<div class="boton_usuario">
+                <button class="boton_user" >Registro</button>
+            </div>-->
+        </div>
+         <input type="checkbox" id="check">
+         <label for="check" class="bar-btn">
+             <i class="fas fa-bars"></i>
+         </label>
+         <ul class="nav-menu">
+             <li><a href="index.html" class="active">Home</a></li>
+             <li><a href="habitaciones.html">Habitaciones</a></li>
+             <li><a href="servicios.html">Servicios</a></li>
+             <li><a href="reservas.html">Reservas</a></li>
+             <li><a href="contacto.html">Contacto</a></li>
+         </ul>
+        </nav> 
+       
+     </header>
+    <main>
+        <section class="titulo">
+            <h1>NUESTRAS HABITACIONES</h1>
+       </section>
+      
+        <!--SLIDER-->
+        <div class="flex">
+            <div class="contenedor_galeria">
+                <input type="radio" id="1" name="image_slide" hidden><!--activa una de las imagenes-->
+                <input type="radio" id="2" name="image_slide" hidden>
+                <input type="radio" id="3" name="image_slide" hidden>
+                <div class="slide">
+                    <div class="item_slide">
+                    <img src="assets/img/habitacion_ancha1.webp" alt="">
+                    </div>
+                    <div class="item_slide">
+                     <img src="assets/img/habitacion_ancha3.webp" alt="">
+                    </div>
+                    <div class="item_slide">
+                        <img src="assets/img/habitacion_ancha5.webp" alt="">
+                     </div>
+                </div>
+    
+                <div class="pagination">
+    
+                    <label class="pagination_item" for="1">
+                        <img src="assets/img/habitacion_ancha1.webp" alt="">
+                    </label>
+                    <label class="pagination_item" for="2">
+                        <img src="assets/img/habitacion_ancha3.webp" alt="">
+                    </label>
+                    <label class="pagination_item" for="3">
+                        <img src="assets/img/habitacion_ancha5.webp" alt="">
+                    </label>
+    
+                </div>
+    
+            </div>
+        </div>
+        <!--fin slider-->
+      <!--Cards-->
+        <div class="contenedor_habitaciones">
+            <div class="cards_habitaciones">
+                <div class="card_img">
+                    <img src="assets/img/habitacion_1.jpg" alt="habitacion_1">
+                </div>
+                <div class="card_body">
+                    <h2>Suite</h2>
+                </div>
+                <div class="card_footer">
+                   <a href="suite.html"><button>Ver</button></a>               
+               </div>
+            </div>
+            <div class="cards_habitaciones">
+                <div class="card_img">
+                    <img src="assets/img/habitacion_2.jpg" alt="habitacion_2">
+                </div>
+                <div class="card_body">
+                    <h2>Superior</h2>
+                </div>
+                <div class="card_footer">
+                    <a href="superior.html"><button>Ver</button></a>
+                </div>
+            </div>
+            <div class="cards_habitaciones">
+                <div class="card_img">
+                    <img src="assets/img/habitacion_3.jpg" alt="habitacion_3">
+                </div>
+                <div class="card_body">
+                    <h2>Doble</h2>
+                </div>
+                <div class="card_footer">
+                    <a href="doble.html"><button>Ver</button></a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="piePagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="assets/img/python_blanco.png" alt="Logo pie pagina">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>SOBRE NOSOTROS</h2>
+                <p>Python representa el trabajo de un grupo de personas dedicadas a la excelencia en hoteles. Llevamos trabajando más de 40 años para satisfacer las necesidades de nuestros huéspedes. Python es una cadena de holetes que se encuentra en varios paises del Caribe y que en cada uno de ellos se siguen los mismos estándares de excelencia.</p>
+            </div>
+            <div class="box">
+                <h2>Siguenos</h2>
+                <div class="red-social">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                </div>
+            </div>
+
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2022 <b>Hotel Python</b> - Todos los derechos reservados.</small>
+        </div>
+    </footer>
+</body>
+</html>
