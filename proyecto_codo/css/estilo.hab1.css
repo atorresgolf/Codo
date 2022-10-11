@@ -96,4 +96,54 @@ h1 {
 	margin-right: 20px;
 	margin-bottom: 35px;
 }
-/*@media only screen and (min-width: 320px) and (max-width:1200px)
+@media screen (max-width: 400px) {
+.mobile {
+   display: flex;
+   justify-content: space-between;
+   width: 30%;
+}
+.logo {
+    margin-left: .6rem;
+    width: 130px;
+}
+nav {
+   flex-direction: row;
+   flex-wrap: nowrap;
+   height: 80px;
+    }
+.bar-btn {
+   display: none;
+}
+.nav-menu {
+   position: relative;
+   height: 100px;
+   top: 0;
+   background: none;
+   transition: none;
+   text-align: right;
+   margin-right: .6rem;
+}
+.nav-menu li {
+   display: inline-block;
+   line-height: 100px;
+   margin: 0 5px;
+   transition: none;
+}
+.nav-menu li a {
+   font-size: 1.1em;
+}
+.piePagina .grupo-1{
+    width: 100%;
+    max-width: 1024px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:50px;
+    padding: 45px 0px;
+
+}
+@media screen and(min-width:1024px) {
+.mobile {
+	width: 100%;
+}
+}
