@@ -9,22 +9,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/proyecto_codo/css/style.css">
-    <link rel="stylesheet" href="/proyecto_codo/css/style_contacto.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_contacto.css">
     <link rel="stylesheet" href=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
 
-    <title>Index</title>
+    <title>Contacto</title>
 </head>
 <body class="bg-secondary">
     <header>
         <nav>
          <div>
-             <img src="/proyecto_codo/assets/img/png/python_blanco.png" class="logo" alt="logo">
+             <img src="assets/img/png/python_blanco.png" class="logo" alt="logo">
          </div>
         <div class="usuarios">
 
             <div class="icono_user"> 
-                <a href="/proyecto_codo/form_login.html"><i class="fa-solid fa-user"></i></a>
+                <a href="form_login.html"><i class="fa-solid fa-user"></i></a>
             </div>
            <!--<div class="boton_usuario">
                 <button class="boton_user" >Registro</button>
@@ -51,33 +51,36 @@
                     <h4>Formulario Contacto</h4>
                 </div>
                 <div class="mb-2">
-                    <form action="https://formsubmit.co/melinayanguez@gmail.com" method="POST" >
+                    <form action="https://formsubmit.co/melinayanguez@gmail.com" method="POST" target="_blank">
                         <div class="mb-2">
                             <label for="nombre">Nombre</label>
-                            <input type="text" class="form-control" name="nombre" id="nombre" placeholder="ej: Anto">
+                            <input type="text" class="form-control" name="nombre" id="nombre" placeholder="ej: Anto" required>
                         </div>
                         <div class="mb-2">
                             <label for="apellido">Apellido</label>
-                            <input type="text" class="form-control" name="apellido" id="apellido" placeholder="ej: Suarez">
+                            <input type="text" class="form-control" name="apellido" id="apellido" placeholder="ej: Suarez" required>
                         </div>
                         <div class="mb-2">
-                            <label for="email">Correo Electronico</label>
-                            <input type="email" class="form-control" name="email" id="email" placeholder="ej: Asuaarez@mail.com">
+                            <label for="email">Correo Electrónico</label>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="ej: Asuaarez@mail.com" required>
                         </div>
                         <div class="mb-2">
-                            <label for="sexo">Sexo</label>
-                            <input type="radio"  name="sexo" id="masculino" value="masculino" > Masculino
-                            <input type="radio"  name="sexo" id="femenino" value="femenino" > Femenino
+                            <label for="sexo">Género</label>
+                            <input type="radio"  name="genero" id="masculino" value="masculino" > Masculino
+                            <input type="radio"  name="genero" id="femenino" value="femenino" > Femenino
+                            <input type="radio"  name="genero" id="nobinario" value="nobinario" > No Binario
+
                         </div>
                         <div class="mb-2">
                             <label for="mensaje">Mensaje</label>
-                            <textarea name="mensaje" id="mensaje" class="form-control" placeholder="ej: Hola"></textarea>
+                            <textarea name="mensaje" id="mensaje" class="form-control" placeholder="ej: Escriba aqui su mensaje..."></textarea>
                         </div>
                         <div class="mb-2">
                             <button type="submit" class="btn btn-primary" value="enviar"> Enviar</button>
                         </div>
-                        <input type="hidden" name="_next" value="http://localhost:8000">
-                        <input type="hidden" name="_captacha" value="false">
+                <!--        <input type="hidden" name="_next" value="http://localhost:8000">-->
+                <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html">        
+              <!--  <input type="hidden" name="_captacha" value="false">-->
                         
                     </form>
                 </div>
@@ -90,7 +93,7 @@
             <div class="box">
                 <figure>
                     <a href="#">
-                        <img src="/proyecto_codo/assets/img/png/python_blanco.png" alt="Logo pie pagina">
+                        <img src="assets/img/png/python_blanco.png" alt="Logo pie pagina">
                     </a>
                 </figure>
             </div>
