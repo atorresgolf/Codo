@@ -505,6 +505,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .piePagina .grupo-1 .box h2{
@@ -518,6 +519,7 @@ main {
 .piePagina .grupo-1 .box p{
     color: #efefef;
     margin-bottom: 10px;
+    text-align: justify;
 }
 .piePagina .grupo-1 .red-social a{
     display: inline-block;
@@ -530,6 +532,7 @@ main {
     background-color: rgba(127, 255, 212,.7);
     text-align: center;
     transition: all 300ms ease;
+    border-radius: 100%;
 }
 .piePagina .grupo-1 .red-social a:hover{
     color: rgba(127, 255, 212,.7);
