@@ -178,7 +178,7 @@ el tiempo q puse en la cantidad de img. puse 6.5s 100/3 img*/
 }
 .card_img img {
     width: 100%;
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 10px 10px 10px 10px;
 }
 .card_body h2{
     text-align: center;

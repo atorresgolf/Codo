@@ -529,6 +529,7 @@ main {
 .piePagina .grupo-1 .box p{
     color: var(--light-color);
     margin-bottom: 10px;
+    text-align: justify;
 }
 .piePagina .grupo-1 .red-social a{
     display: inline-block;
