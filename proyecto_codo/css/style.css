@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&family=Square+Peg&display=swap');
 
+:root { 
+    --brand-color: rgb(142, 193, 214);
+    --dark-color: rgb(61, 75, 95);
+    --mid-color: rgb(203, 213, 225);
+    --light-color: rgb(249, 250, 251);
+   }
 *{  margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -14,7 +20,7 @@ html {
 /*css del header*/
 body {
     font-family: 'Raleway', sans-serif;
-
+    background: var(--light-color);
 }
 
 /*header {
@@ -23,10 +29,10 @@ body {
 /*Navigation*/
 nav {
     height: 80px;
-    width: 100%;
+    width: 100vw;
     position: fixed;
     top:0;
-    background: rgb(127, 255, 212);
+    background: var(--light-color);
     display: flex;
     z-index: 100;
     justify-content: space-between ;
@@ -55,40 +61,40 @@ nav {
     transition: .5s;
 }
 .icono_user i {
-    color: rgb(9, 13, 126);
+    color: var(--brand-color);
 
 }
 .icono_user i:hover {
-    color: rgb(127, 255, 212);
+    color: var(--mid-color);
     font-size: 2.1rem;
     transform: translateY(20%);
 }
 .boton_user {
-    background: #fff;
-    color: rgb(9, 13, 126);
+    background: var(--light-color);
+    color: var(--brand-color);
     padding: .5rem;
     margin-left: .5rem;
     border-radius: 5px;
     cursor: pointer;
 }
 .boton_user:hover {
-    background: rgba(9, 13, 126, 0.95) ;
-    color: #fff;
+    background: var(--brand-color) ;
+    color: var(--light-color);
 
 }
 .bar-btn {
     font-size: 25px;
-    color: rgb(9, 13, 126);
+    color: var(--brand-color);
     margin-right: 20px;
     cursor: pointer;
 }
 .nav-menu {
     position: fixed;
-    width: 100%;
+    width: 100vw;
     /*height: 100vh; al pcipio asi para verlo tendre q modificarlos para desp ocultarlo*/
     height: 0vh;
     top: 80px;
-    background: rgba(69, 75, 230, 1);
+    background: var(--dark-color);
     text-align: center;
     transition: all .5s;
 }
@@ -100,14 +106,14 @@ nav {
     transition: all .5s;
 }
 .nav-menu li a {
-    color: rgb(9, 13, 126);
+    color: var(--brand-color);
     font-size: 1.5rem;
     text-transform: uppercase;
     font-weight: 600;
     
 }
 .nav-menu li a.active, .nav-menu li a:hover {
-    color: #000;
+    color: var(--mid-color);
     transition: .3s;
 }
 #check {
@@ -115,7 +121,7 @@ nav {
 }
 /*pseudo-clase checked para mostrar u ocultar el menu responsive cada vez que se de click en el icono menu*/
 #check:checked ~ .nav-menu{
-    height: 80vh;
+    height: 40vh;
     z-index: 100;
 }
 
@@ -134,14 +140,14 @@ main {
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    background: #f8f7f7;
+    background: var(--light-color);
 }
 /*banner text*/
 
 .banner {
     height: 40vh;
     width: 100%;
-    background-image: url(https://atorresgolf.github.io/Codo/proyecto_codo/assets/img/jpg/playa1.jpg);
+    background-image: url(../assets/img/jpg/playa1.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -150,7 +156,7 @@ main {
     padding: 0 30px;
     margin-top: 25vh;
     text-align: center;
-    color: rgb(127, 255, 212);
+    color: var(--brand-color);
     
 }
 .banner-text h1 {
@@ -163,7 +169,7 @@ main {
 }
 
 .banner-text span {
-    color:rgba(9, 13, 126, 0.95);
+    color: var(--mid-color);
 }
 .botones a {
     display: inline-block;
@@ -171,15 +177,15 @@ main {
 .boton1 {
     margin-right: 40px;
     padding: 10px 30px;
-    background: rgba(9, 13, 126, 0.95) ;
-    color: #fff;
+    background: var(--dark-color) ;
+    color: var(--mid-color);
     border-radius: 5px;
     transition: .5s;
     opacity: .6;
 }
 .boton1:hover {
-    background: #fff;
-    color: rgba(9, 13, 126, 0.95);
+    background: var(--mid-color);
+    color: var(--dark-color);
     transform: translateX(20%);
     opacity: 1;
 }
@@ -187,14 +193,14 @@ main {
     margin-right: 40px;
     padding: 10px 30px;
     border-radius: 5px;
-    background: #fff;
-    color: rgba(9, 13, 126, 0.95);
+    background: var(--mid-color);
+    color: var(--dark-color);
     transition: .5s;
     opacity: .6;
 }
 .boton2:hover {
-    background: rgba(9, 13, 126, 0.95) ;
-    color: #fff;
+    background: var(--dark-color) ;
+    color: var(--mid-color);
     transform: translateX(20%);
     opacity: 1;
 }
@@ -319,12 +325,12 @@ main {
  .reservas_fixed {
     position:fixed;
     bottom: 0;
-    width: 100%;
-    background: rgb(127, 255, 212);
+    width: 100vw;
+    background: var(--brand-color);
     height: 5vh;
 }
     .reservar a h2 {
-        color: #fff;
+        color: var(--light-color);
         font-size: 1.3rem;
         text-align: center;
         text-transform: uppercase;
@@ -334,8 +340,8 @@ main {
         cursor: pointer;
     }
     .reservar a h2:hover{
-        color: rgba(9, 13, 126, 0.95);
-        background: #fff;
+        color: var(--brand-color);
+        background: var(--light-color);
     }
 
  /*imagen con texto arriba*/
@@ -346,18 +352,18 @@ main {
 }
 .descripcion {
     padding: .9rem .9rem;
-    background: rgba(127, 255, 212, .8);
+    background: var(--light-color);
     line-height: 2rem;
     font-size: .8rem;
     font-weight: 300;
-    color: #646161;
+    color: var(--dark-color);
 
 }
 .banner-image {
     margin: 1.5rem 1.5rem;
 }
 .banner-image img{
-    width: 100%;
+    width: 100vw;
 }
 /*imagen frente hotel + texto*/  
 .wrap {
@@ -366,12 +372,12 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to bottom, rgb(0 0 0 / .5), rgb(0 0 0 / .5)), url(https://atorresgolf.github.io/Codo/proyecto_codo/assets/img/jpg/frente_1.jpg);
+    background: linear-gradient(to bottom, rgb(0 0 0 / .5), rgb(0 0 0 / .5)), url(../assets/img/jpg/pileta_ancha3.jpg);
     background-size: cover;
     background-position: center;
 }
 .wrap-texto {
-    color: #fff;
+    color: var(--light-color);
     text-align: center;
     width: 70%;
 }
@@ -388,7 +394,7 @@ main {
     align-items: center;
     justify-content: center;
     min-height: 90vh;
-    background: #f3f1f5;
+    background: var(--mid-color);
 }
 
 .card {
@@ -414,14 +420,14 @@ main {
     transition: .5s;
 }
 .content h2, a {
-    color: rgba(255, 255, 255, .8);
+    color: var(--light-color);
     margin: 10px 0;
 }
 .content a {
-    color: rgb(9, 13, 126);
+    background: var(--dark-color);
+    color: var(--light-color);
     font-size: 1rem;
     font-weight: 600;
-    background: #fff;
     padding: .5em;
     border-radius: 5px;
     transition: .5s;
@@ -437,8 +443,8 @@ main {
     opacity: 1;
 }
 .content a:hover {
-    color: #fff;
-    background: rgb(9, 13, 126);
+    color: var(--dark-color);
+    background: var(--brand-color);
     font-size: 1.5em;;
 }
 
@@ -448,20 +454,21 @@ main {
     flex-flow: column nowrap;   
     margin-bottom: 1rem; 
 }
-    .aside {
-        background: rgba(127, 255, 212, .8);
-    }
+.aside {
+    background: var(--light-color);
+}
     .descripcion_ubicacion h2{
         text-align: center;
         font-size: 1rem;
         font-weight: 300;
         padding: .8rem;
-        color: #646161;
+        color: var(--dark-color);
+        margin-left: 3.5rem;
     }
     .mapa {
         display: flex;
         justify-content: center;
-        width: 95%;
+        width: 100vw;
         text-align: center;
     }
     /*boton ir arriba*/
@@ -474,20 +481,21 @@ main {
     width: 30px;
     height: 30px;
     line-height: 30px;
-    color:  rgba(9, 13, 126, 0.95);
+    color:  var(--brand-color);
     bottom: 30px;
     right: 20px;
     text-decoration: none;
     text-align: center;
-    background:rgb(127, 255, 212);
+    background:var(--dark-color);
+    border-radius: 5px;
 }
 /*fin section*/
 /*footer*/
 .piePagina{
-    top:100vh;
+    top: 100vh;
     bottom:0;
-    width: 100%;
-    background-color:  rgba(9, 13, 126, 0.95);
+    width: 100vw;
+    background-color:  var(--dark-color);
     clear: both;
       
 }
@@ -509,7 +517,7 @@ main {
 }
 
 .piePagina .grupo-1 .box h2{
-    color: #fff;
+    color: var(--mid-color);
     margin-bottom: 25px;
     font-size: 20px;
 }
@@ -517,7 +525,7 @@ main {
     width: 15rem;
 }
 .piePagina .grupo-1 .box p{
-    color: #efefef;
+    color: var(--light-color);
     margin-bottom: 10px;
 }
 .piePagina .grupo-1 .red-social a{
@@ -526,17 +534,18 @@ main {
     width: 45px;
     height: 45px;
     line-height: 45px; 
-    color: #fff;
+    color: var(--light-color);
     margin-right: 10px;
-    background-color: rgba(127, 255, 212,.7);
+    background-color: var(--brand-color);
     text-align: center;
+    border-radius: 3px;
     transition: all 300ms ease;
 }
 .piePagina .grupo-1 .red-social a:hover{
-    color: rgba(127, 255, 212,.7);
+    color: var(--mid-color);
 }
 .piePagina .grupo-2{
-    background-color: rgba(127, 255, 212,.7);
+    background-color: var(--brand-color);
     padding: 15px 10px;
     text-align: center;
     color: #fff;
@@ -548,7 +557,7 @@ main {
 /*responsive for tablets*/
 @media screen and (min-width: 480px)
 {
-    .banner {
+       .banner {
         height: 60vh;
         
     }
@@ -578,10 +587,15 @@ main {
         height: 500px;
 
     }
+    .descripcion_ubicacion {
+       margin-left: 5rem;
+    }
     .descripcion_ubicacion h2 {
         line-height: 2.3rem;
         font-size: 1rem;
         font-weight: 400;
+        text-align: justify;
+        
     }
     .go_top_btn {
         font-size: 1.2rem;
@@ -590,6 +604,7 @@ main {
         line-height: 40px;
        bottom: 40px;
     }
+    
 }
 
 /*Responsive for desktop*/
@@ -603,6 +618,7 @@ main {
         flex-wrap: nowrap;
         height: 80px;
     }
+    
     /*oculto el icono menu par ala vista desktop*/
     .bar-btn {
         display: none;
@@ -614,7 +630,7 @@ main {
         background: none;
         transition: none;
         text-align: right;
-        margin-right: .6rem;
+        margin-right: 4rem;
     }
     .nav-menu li {
         display: inline-block;
@@ -676,12 +692,7 @@ main {
         line-height: 50px;
     }
 
-    /*reservar*/
-
-/*reservas*/
-
-
-
+   
 /*footer*/
 .piePagina .grupo-1{
     width: 100%;
@@ -705,8 +716,7 @@ main {
         height: 100vh;
     }
     .piePagina .grupo-1{
-        width: 100%;
-        max-width: 1200px;
+        max-width: 1600px;
 }
 }
 

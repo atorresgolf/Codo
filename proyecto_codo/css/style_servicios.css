@@ -7,19 +7,27 @@
     background: #f3f1f5;
 }*/
 /*CARDS*/
+
+:root { 
+    --brand-color: rgb(142, 193, 214);
+    --dark-color: rgb(61, 75, 95);
+    --mid-color: rgb(203, 213, 225);
+    --light-color: rgb(249, 250, 251);
+   }
+
 body {
    /* height: 100vh;*/
     font-family: 'Raleway', sans-serif;
 }
 .titulo {
-    background: rgba(9, 13, 126, .6);
+    background: var(--brand-color);
     margin-top: 5px;
     height: 35px;
     width: 100%;
    
 }
 .titulo h1{
-    color: rgb(127, 255, 212);
+    color: var(--light-color);
     font-size: 20px;
     text-align: center;
     padding: 5px 5px;
@@ -27,7 +35,7 @@ body {
 
 .contenedor_servicios {
     margin: 2rem;
-    background: #e7ebf4;
+    background: var(--mid-color);
  }
 .row {
     width: 100%;
@@ -59,7 +67,7 @@ body {
     position: absolute;
     top: 0;
     right: 0;
-    color: #fff;
+    color: var(--light-color);
     width: 100%;
     height: 100%;
 
@@ -100,7 +108,7 @@ body {
     align-items: center;
     padding: 15px;
     transition: 0.6s;
-    bottom: -60px; /*lo hago salir del card , lo saco a esto si no quiero q desaparezca*/
+    bottom: -90px; /*lo hago salir del card , lo saco a esto si no quiero q desaparezca*/
     transition-property: bottom;
 }
 .imagen_card:hover .mas {
@@ -163,12 +171,20 @@ body {
 @media screen and (min-width: 1024px) {
     .row {
         flex-flow: row nowrap;
+        width: 100vw;
     }
     .imagen_card {
-        max-width: 480px;
+        max-width: 330px;
         height: 300px;
         margin: 20px;
         overflow: hidden;
     }
 }
-
+@media screen and (min-width: 1280px) {
+    .imagen_card {
+        max-width: 430px;
+        height: 300px;
+        margin: 20px;
+        overflow: hidden;
+    }
+}

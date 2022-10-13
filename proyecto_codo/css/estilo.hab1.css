@@ -1,3 +1,9 @@
+:root { 
+    --brand-color: rgb(142, 193, 214);
+    --dark-color: rgb(61, 75, 95);
+    --mid-color: rgb(203, 213, 225);
+    --light-color: rgb(249, 250, 251);
+   }
 *{
 	margin: 0;
 	padding: 0;
@@ -82,7 +88,7 @@ h1 {
 	font-size: 70px;
 	margin-bottom: 30px;
 	margin-top: 20px;
-	color: #F2F2F2;
+	color: var(--brand-color);
 }
 .item-1 p {
 	text-align: justify;
@@ -96,7 +102,7 @@ h1 {
 	margin-right: 20px;
 	margin-bottom: 35px;
 }
-@media screen (max-width: 400px) {
+@media screen and (max-width: 400px) {
 .mobile {
    display: flex;
    justify-content: space-between;

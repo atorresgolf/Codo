@@ -8,6 +8,14 @@
     background: #f3f1f5;
 }*/
 /*probando con este body*/
+
+:root { 
+    --brand-color: rgb(142, 193, 214);
+    --dark-color: rgb(61, 75, 95);
+    --mid-color: rgb(203, 213, 225);
+    --light-color: rgb(249, 250, 251);
+   }
+
 body {
    width: 100%;
   /* height: 100vh;*/
@@ -18,14 +26,14 @@ body {
     
 }
 .titulo {
-    background: rgba(9, 13, 126, .6);
+    background: var(--brand-color);
     margin-top: 5px;
     height: 35px;
     width: 100%;
    
 }
 .titulo h1{
-    color: rgb(127, 255, 212);
+    color: var(--light-color);
     font-size: 20px;
     text-align: center;
     padding: 5px 5px;
@@ -181,7 +189,7 @@ el tiempo q puse en la cantidad de img. puse 6.5s 100/3 img*/
     margin-bottom: 10px;
     padding: 5px;
     line-height: 1.2;
-    color: #6a6a6a;
+    color: var(--dark-color);
     font-size: 16px;
 }
 .card_footer {
@@ -191,8 +199,8 @@ el tiempo q puse en la cantidad de img. puse 6.5s 100/3 img*/
 }
 .card_footer button {
     width: 150px;
-    color: #2fb4cc;
-    border: 2px solid #2fb4cc;
+    color: var(--brand-color);
+    border: 2px solid var(--brand-color);
     border-radius: 15px;;
     padding: 6px;
     font-size: 15px;
@@ -201,8 +209,8 @@ el tiempo q puse en la cantidad de img. puse 6.5s 100/3 img*/
     transition: 0.2s; /*hace la transicion del hover mas lenta*/
 }
 .card_footer button:hover {
-    background: #2fb4cc;
-    color:#fff;
+    background: var(--brand-color);
+    color:var(--light-color);
     border: 2px solid #fff;
 
 }

@@ -2,14 +2,14 @@
 
 
 .titulo {
-    background: rgba(9, 13, 126, .6);
+    background: var(--brand-color);
     margin-top: 5px;
     height: 35px;
     width: 100%;
    
 }
 .titulo h1{
-    color: rgb(127, 255, 212);
+    color: var(--light-color);
     font-size: 20px;
     text-align: center;
     padding: 5px 5px;
