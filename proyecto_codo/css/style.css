@@ -353,8 +353,11 @@ main {
 .descripcion {
     padding: .9rem .9rem;
     background: var(--light-color);
+    
+}
+.descripcion h2 {
     line-height: 2rem;
-    font-size: .8rem;
+    font-size: 1rem;
     font-weight: 300;
     color: var(--dark-color);
 
@@ -463,7 +466,6 @@ main {
         font-weight: 300;
         padding: .8rem;
         color: var(--dark-color);
-        margin-left: 3.5rem;
     }
     .mapa {
         display: flex;
@@ -483,7 +485,7 @@ main {
     line-height: 30px;
     color:  var(--brand-color);
     bottom: 30px;
-    right: 20px;
+    right: 120px;
     text-decoration: none;
     text-align: center;
     background:var(--dark-color);
@@ -569,9 +571,9 @@ main {
         width: 44px;
         height: 63px;
     }
-    .descripcion {
+    .descripcion h2{
         line-height: 2.3rem;
-        font-size: 1rem;
+        font-size: 1.2rem;
         font-weight: 400;
     }
     .wrap {
@@ -592,10 +594,11 @@ main {
     }
     .descripcion_ubicacion h2 {
         line-height: 2.3rem;
-        font-size: 1rem;
+        font-size: 1.2rem;
         font-weight: 400;
         text-align: justify;
-        
+        margin-left: 3.5rem;
+
     }
     .go_top_btn {
         font-size: 1.2rem;
@@ -661,9 +664,9 @@ main {
         height: 125px;
     }
 
-    .descripcion {
+    .descripcion h2{
         line-height: 2.6rem;
-        font-size: 1.4rem;
+        font-size: 1.5rem;
         font-weight: 600;
     }
     .wrap {
@@ -684,6 +687,9 @@ main {
     }
     .ubicacion {
         flex-flow: row nowrap;
+    }
+    .descripcion_ubicacion h2 {
+        font-size: 1.5rem;
     }
     .go_top_btn {
         font-size: 1.8rem;
@@ -716,7 +722,7 @@ main {
         height: 100vh;
     }
     .piePagina .grupo-1{
-        max-width: 1600px;
+        max-width: 3000px;
 }
 }
 
