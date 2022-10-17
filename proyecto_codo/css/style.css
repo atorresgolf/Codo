@@ -21,6 +21,7 @@ html {
 body {
     font-family: 'Raleway', sans-serif;
     background: var(--light-color);
+    scroll-behavior: smooth;
 }
 
 /*header {
@@ -352,12 +353,13 @@ main {
 /*imagen frente hotel + texto*/  
 .wrap {
     width: 100vw;
-    height: 40vh;
+    height: 25em;
     display: flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(to bottom, rgb(0 0 0 / .5), rgb(0 0 0 / .5)), url(../assets/img/jpg/pileta_ancha3.jpg);
     background-size: cover;
+    background-attachment: fixed;
     background-position: center;
 }
 .wrap-texto {
@@ -366,7 +368,7 @@ main {
     width: 70%;
 }
 .wrap-texto h1{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 300;
     line-height: 1.6rem;
     text-transform: uppercase;
@@ -377,8 +379,9 @@ main {
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
-    min-height: 90vh;
+    min-height: 40vh; 
     background: var(--mid-color);
+    width: 100vw;
 }
 
 .card {
@@ -565,13 +568,11 @@ main {
         font-size: 1rem;
         font-weight: 400;
     }
-    .wrap {
-        height: 60vh;
-    }
+   
     .wrap-texto h1{
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: 600;
-        line-height: 2.5rem;
+        line-height: 2.0rem;
     }    
     .card {
         width: 450px;
@@ -654,18 +655,16 @@ main {
         font-size: 1.4rem;
         font-weight: 600;
     }
-    .wrap {
-        height: 80vh;
-    }
+   
     .wrap-texto h1{
-        font-size: 3rem;
+        font-size: 2rem;
         font-weight: 900;
-        line-height: 2.5rem;
+        line-height: 2.2rem;
     }
     /*cards*/
     .cards {
         flex-flow: row wrap;
-    
+        
     }
     .card {
         width: 500px;
@@ -693,26 +692,41 @@ main {
     margin: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap:50px;
+    grid-gap: 10px;
     padding: 45px 0px;
 }
 }
 
 
 @media screen and (min-width:1024px) {
-    .bird {
-        width: 132px;
-        height: 187px;
-    
+    .nav-menu li a {
+        font-size: 1rem;
     }
+  
     .descripcion_ubicacion {
-        margin-left: 5rem;
+        margin-left: 2rem;
      }
-    .wrap {
-        height: 100vh;
-    }
+    
     .piePagina .grupo-1{
         grid-gap: 12%;
+        max-width: 1680px;
+
+}
+}
+
+@media screen and (min-width:1680px) {
+    .nav-menu li a {
+        font-size: 1.5rem;
+    }
+  
+    .descripcion_ubicacion {
+        margin-left: 1rem;
+     }
+    
+    .piePagina .grupo-1{
+        grid-gap: 12%;
+        max-width: 3000px;
+
 }
 }
 
