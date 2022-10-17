@@ -41,7 +41,7 @@ nav {
 }
 .logo {
     width: 100px;
-    margin-left: 20px;
+    margin-left: 2rem;
    height: auto;
    cursor: pointer;
    border-radius: 3px;
@@ -436,10 +436,14 @@ main {
 .ubicacion{
     display: flex;
     flex-flow: column nowrap;   
-    margin-bottom: 1rem; 
+    padding: .6rem .6rem; 
 }
 .aside {
     background: var(--light-color);
+}
+.descripcion_ubicacion {
+    padding: .6re .6rem;
+
 }
     .descripcion_ubicacion h2{
         text-align: center;
@@ -447,7 +451,7 @@ main {
         font-weight: 300;
         padding: .8rem;
         color: var(--dark-color);
-        margin-left: 3.5rem;
+        margin-left: .6rem;
     }
     .mapa {
         display: flex;
@@ -496,21 +500,24 @@ main {
     width: 100%;
     height: 100px;
     display: flex;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
 }
 
 .piePagina .grupo-1 .box h2{
     color: var(--mid-color);
-    margin-bottom: 25px;
-    font-size: 20px;
+    margin: 10px 10px;
+    font-size: 1rem;
 }
 .piePagina .grupo-1 .box img {
-    width: 15rem;
+    width: 10rem;
 }
 .piePagina .grupo-1 .box p{
     color: var(--light-color);
-    margin-bottom: 10px;
+    margin: 10px 10px;
+}
+.red-social {
+    margin: 10px;
 }
 .piePagina .grupo-1 .red-social a{
     display: inline-block;
@@ -571,9 +578,7 @@ main {
         height: 500px;
 
     }
-    .descripcion_ubicacion {
-       margin-left: 5rem;
-    }
+    
     .descripcion_ubicacion h2 {
         line-height: 2.3rem;
         font-size: 1rem;
@@ -594,7 +599,6 @@ main {
 /*Responsive for desktop*/
 @media screen and (min-width: 768px) {
     .logo {
-        margin-left: .6rem;
         width: 130px;
     }
     nav {
@@ -669,6 +673,11 @@ main {
     .ubicacion {
         flex-flow: row nowrap;
     }
+    
+     .mapa {
+        width: 40%;
+        height: 60%;
+     }
     .go_top_btn {
         font-size: 1.8rem;
         width: 50px;
@@ -690,17 +699,20 @@ main {
 }
 
 
-@media screen and(min-width:1024px) {
+@media screen and (min-width:1024px) {
     .bird {
         width: 132px;
         height: 187px;
     
     }
+    .descripcion_ubicacion {
+        margin-left: 5rem;
+     }
     .wrap {
         height: 100vh;
     }
     .piePagina .grupo-1{
-        max-width: 1600px;
+        grid-gap: 12%;
 }
 }
 
