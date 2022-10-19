@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&family=Square+Peg&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
 :root { 
     --brand-color: rgb(142, 193, 214);
     --dark-color: rgb(61, 75, 95);
@@ -11,16 +12,15 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-    /* font-family: 'Poppins', sans-serif; */
-    /* font-family: 'Square Peg', cursive; */
+ /*    font-family: 'Quicksand', sans-serif;*/ 
+     font-family: 'Lato', sans-serif; 
 }
 html {
     scroll-behavior: smooth;
 }
 /*css del header*/
 body {
-    font-family: 'Raleway', sans-serif;
-    background: var(--light-color);
+      background: var(--light-color);
     scroll-behavior: smooth;
 }
 
@@ -335,13 +335,14 @@ main {
     flex-direction: column;
     justify-content: center;
 }
-.descripcion {
+.descripcion h2 {
     padding: .9rem .9rem;
     background: var(--light-color);
-    line-height: 2rem;
-    font-size: .8rem;
+    line-height: 1.2rem;
+    font-size: 1rem;
     font-weight: 300;
     color: var(--dark-color);
+    text-align: justify;
 
 }
 .banner-image {
@@ -518,6 +519,7 @@ main {
 .piePagina .grupo-1 .box p{
     color: var(--light-color);
     margin: 10px 10px;
+    text-align: justify;
 }
 .red-social {
     margin: 10px;
@@ -563,10 +565,12 @@ main {
         width: 44px;
         height: 63px;
     }
-    .descripcion {
+    .descripcion h2{
         line-height: 2.3rem;
         font-size: 1rem;
         font-weight: 400;
+        text-align: justify;
+
     }
    
     .wrap-texto h1{
@@ -650,12 +654,7 @@ main {
         height: 125px;
     }
 
-    .descripcion {
-        line-height: 2.6rem;
-        font-size: 1.4rem;
-        font-weight: 600;
-    }
-   
+    
     .wrap-texto h1{
         font-size: 2rem;
         font-weight: 900;
@@ -683,7 +682,7 @@ main {
         height: 50px;
         line-height: 50px;
     }
-
+    
    
 /*footer*/
 .piePagina .grupo-1{
@@ -706,6 +705,7 @@ main {
     .descripcion_ubicacion {
         margin-left: 2rem;
      }
+     
     
     .piePagina .grupo-1{
         grid-gap: 12%;
@@ -728,5 +728,6 @@ main {
         max-width: 3000px;
 
 }
+
 }
 
