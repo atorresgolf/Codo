@@ -52,36 +52,14 @@ nav {
     transform: translateX(20%);
     opacity: 1;
 }
-.usuarios {
-    display: inline-flex;
-}
-.icono_user {
-    margin-left: 20px;
-    font-size: 1.6rem;
-    transition: .5s;
-}
-.icono_user i {
-    color: var(--brand-color);
 
-}
+
 .icono_user i:hover {
     color: var(--mid-color);
     font-size: 2.1rem;
     transform: translateY(20%);
 }
-.boton_user {
-    background: var(--light-color);
-    color: var(--brand-color);
-    padding: .5rem;
-    margin-left: .5rem;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.boton_user:hover {
-    background: var(--brand-color) ;
-    color: var(--light-color);
-
-}
+/* menu hamburguesa*/
 .bar-btn {
     font-size: 25px;
     color: var(--brand-color);
@@ -121,13 +99,19 @@ nav {
 }
 /*pseudo-clase checked para mostrar u ocultar el menu responsive cada vez que se de click en el icono menu*/
 #check:checked ~ .nav-menu{
-    height: 40vh;
+    height: 100vh;
     z-index: 100;
 }
 
 #check:checked ~ .nav-menu li {
     display: block;
 }
+.nav-menu li a .icono_user {
+    font-size: 1.3rem;
+    transition: .5s;
+    margin-right: .3rem;
+}
+
 /*fin header*/
 
 /*fin css header*/
@@ -353,11 +337,8 @@ main {
 .descripcion {
     padding: .9rem .9rem;
     background: var(--light-color);
-    
-}
-.descripcion h2 {
     line-height: 2rem;
-    font-size: 1rem;
+    font-size: .8rem;
     font-weight: 300;
     color: var(--dark-color);
 
@@ -466,6 +447,7 @@ main {
         font-weight: 300;
         padding: .8rem;
         color: var(--dark-color);
+        margin-left: 3.5rem;
     }
     .mapa {
         display: flex;
@@ -485,7 +467,7 @@ main {
     line-height: 30px;
     color:  var(--brand-color);
     bottom: 30px;
-    right: 120px;
+    right: 20px;
     text-decoration: none;
     text-align: center;
     background:var(--dark-color);
@@ -572,9 +554,9 @@ main {
         width: 44px;
         height: 63px;
     }
-    .descripcion h2{
+    .descripcion {
         line-height: 2.3rem;
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-weight: 400;
     }
     .wrap {
@@ -595,11 +577,10 @@ main {
     }
     .descripcion_ubicacion h2 {
         line-height: 2.3rem;
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-weight: 400;
         text-align: justify;
-        margin-left: 3.5rem;
-
+        
     }
     .go_top_btn {
         font-size: 1.2rem;
@@ -643,7 +624,7 @@ main {
         transition: none;
     }
     .nav-menu li a {
-        font-size: 1.1em;
+        font-size: .9rem;
     }
     .banner {
         height: 100vh;
@@ -665,9 +646,9 @@ main {
         height: 125px;
     }
 
-    .descripcion h2{
+    .descripcion {
         line-height: 2.6rem;
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         font-weight: 600;
     }
     .wrap {
@@ -688,9 +669,6 @@ main {
     }
     .ubicacion {
         flex-flow: row nowrap;
-    }
-    .descripcion_ubicacion h2 {
-        font-size: 1.5rem;
     }
     .go_top_btn {
         font-size: 1.8rem;
@@ -723,7 +701,7 @@ main {
         height: 100vh;
     }
     .piePagina .grupo-1{
-        max-width: 3000px;
+        max-width: 1600px;
 }
 }
 
