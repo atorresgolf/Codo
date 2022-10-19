@@ -22,3 +22,25 @@ function validarFormulario(evento){
     this.submit();
 
 }
+/**Validar email**/
+var email = document.getElementById('email').value;
+
+function validarEmail(email) {
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/.test(email)){
+     alert("La dirección de email " + email + " es correcta.");
+    } else {
+     alert("La dirección de email es incorrecta.");
+    }
+  }
+
+
+  let valor = document.getElementById('email').value;
+  function validarEmail(valor) {
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/.test(valor)){
+     alert("La dirección de email " + valor + " es correcta.");
+    } else {
+     alert("La dirección de email es incorrecta.");
+    }
+  }
+
+   
