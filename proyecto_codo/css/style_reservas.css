@@ -1,4 +1,9 @@
-
+:root { 
+  --brand-color: rgb(142, 193, 214);
+  --dark-color: rgb(61, 75, 95);
+  --mid-color: rgb(203, 213, 225);
+  --light-color: rgb(249, 250, 251);
+ }
 
 
 .titulo {
@@ -39,11 +44,11 @@
     margin-bottom: 1rem;
     width: 100%;
     height: 50vh;
-    color: white;
+    color: var(--light-color);
   }
   
   .book .input {
-    background: #242e5a;
+    background: var(--dark-color);
     padding: 20px 20px 40px 20px;
   }
   
@@ -55,15 +60,15 @@
   input {
     width: 100%;
     padding: 15px;
-    border: 2px solid rgba(255, 255, 255, 0.1);
+    border: 2px solid rgb(249, 250, 251);
     outline: none;
-    background: #263760;
+    background: var(--brand-color);
     margin-top: 20px;
-    color: white;
+    color: var(--light-color);
   }
   
   ::placeholder {
-    color: white;
+    color: var(--light-color);
   }
   
   .book .search {
