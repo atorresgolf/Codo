@@ -11,3 +11,11 @@
     text-align: center;
     padding: 5px 5px;
 }
+
+.warnings{
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    color: #b06ab3;
+    padding-top: 20px;
+}

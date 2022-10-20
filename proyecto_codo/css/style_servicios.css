@@ -1,13 +1,3 @@
-/*@import url(/css/index.css);
-/*body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background: #f3f1f5;
-}*/
-/*CARDS*/
-
 :root { 
     --brand-color: rgb(142, 193, 214);
     --dark-color: rgb(61, 75, 95);
@@ -52,12 +42,17 @@ body {
     margin: 20px;
     overflow: hidden;
 }
+.harry {
+    object-fit: cover;
+}
 .imagen_card img {
     opacity: 0.8;
     position: relative;
     vertical-align: top;
     transition: 0.6s;
     transition-property: opacity;
+    object-fit: contain;
+
 }
 .imagen_card:hover img {
     opacity: 1;

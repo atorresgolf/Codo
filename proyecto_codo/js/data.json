@@ -1,0 +1,35 @@
+{
+    "peliculas" : [
+        {   "nombre":"El señor de los anillos: Los anillos del poder(2022)",
+            "path":"./assets/img/jpg/anillos.jpg",
+            "id" : 1,
+            "desc": "Un reparto coral de personajes —unos conocidos y otros nuevos— debe afrontar la reaparición del mal en la Tierra Media. Desde las profundidades más oscuras de las Montañas Nubladas hasta los majestuosos bosques de Lindon, desde el reino insular de Númenor hasta los extremos más remotos del mapa, estos parajes y personajes forjarán los legados que perdurarán más allá de su desaparición."
+    },
+        {   "nombre":"Conversaciones con asesinos: Las cintas de Jeffrey Dahmer (2022)",
+            "path":"./assets/img/jpg/conversaciones.jpg",
+            "id":2,
+            "desc": "El asesino en serie Jeffrey Dahmer confiesa sus macabros crímenes en entrevistas no vigiladas y ofrece un inquietante vistazo a una mente perturbada."
+    },
+        {   "nombre": "Minions: El origen de Gru (2022)",
+            "path":"./assets/img/jpg/minions.jpg",
+            "id":3,
+            "desc": "Mucho antes de convertirse en un genio del mal, Gru no era más que un chaval de 12 años en plenos años 70 tratando de conquistar el mundo desde el sótano de su casa de un barrio residencial cualquiera. Y no le iba demasiado bien. Pero cuando Gru se cruza en su camino con Kevin, Stuart, Bob, y Otto —un nuevo Minion con aparato en los dientes y desesperado por sentirse aceptado—, esta inesperada familia unirá fuerzas para construir su primera guarida, diseñar sus primeras armas y llevar a cabo sus primeras misiones."
+    },
+        {   "nombre":"Sonic 2: La película (2022)",
+            "path":"./assets/img/jpg/sonic.jpg",
+            "id":4,
+            "desc": "Después de establecerse en Green Hills, Sonic se muere por demostrar que tiene madera de auténtico héroe, pero Robotnik regresa con nuevo compañero Knuckles, en busca de una esmeralda que tiene el poder de destruir civilizaciones, pero Sonic no está solo, le ayudará Tails."
+    },
+        {   "nombre":"Thor (2011)",
+            "path":"./assets/img/jpg/thor.jpg",
+            "id":5,
+            "desc": "Thor es un arrogante y codicioso guerrero cuya imprudencia desata una antigua guerra. Por ese motivo, su padre Odín lo castiga desterrándolo a la Tierra para que viva entre los hombres y descubra así el verdadero sentido de la humildad. Cuando el villano más peligroso de su mundo envía a la Tierra a las fuerzas más oscuras de Asgard, Thor se dará cuenta de lo que realmente hace falta para ser un verdadero héroe."
+    },
+        {   "nombre":"Hotel Transilvania: Transformanía (2022)",
+            "path":"./assets/img/jpg/transilvania.jpg",
+            "id":6,
+            "desc": "Drac y la pandilla vuelven, como nunca los habías visto antes en Hotel Transilvania: Transformanía. Volveremos a encontrarnos con nuestros monstruos favoritos en una aventura completamente nueva en la que Drac se enfrentará a una de las situaciones más aterradoras vividas hasta el momento. Cuando el misterioso invento de Van Helsing, el Rayo Monstrificador, se vuelve totalmente fuera de control, Drac y sus monstruosos amigos se transforman en humanos, ¡y Johnny se convierte en un monstruo!"
+    }
+]
+
+}
