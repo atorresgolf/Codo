@@ -35,5 +35,8 @@ form.addEventListener("submit", e => {
         parrafo.innerHTML = warnings;
     }else{
         parrafo.innerHTML = "Enviado";
+        entrar = false
+        form.submit();
     }
+    
 })
